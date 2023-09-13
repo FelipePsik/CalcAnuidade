@@ -1,7 +1,7 @@
 var anuidade_aux = 208.9;
 var anuidade_tec = 255.49;
 var anuidade_enf = 353.53;
-var taxaSec = 200;
+var taxaSec = 253.28;
 
 var meses = [
   "Abril",
