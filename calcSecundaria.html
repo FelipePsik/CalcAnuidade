@@ -1,0 +1,48 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reabertura de Inscrição</title>
+    <link rel="stylesheet" href="../AppCalcAnuidade/style.css">
+</head>
+<body>
+    <div class="container">
+    <!-- Inscrição Secundária -->
+        <div id="info"><h1>Selecione a Categoria e o Mês para obter o valor da Taxa de Inscrição Secundária já com Anuidade.</h1></div>
+    <label>
+        <select id="categoriaSelect" name="options" class="custom-select">
+        <option value="Selecione a Categoria">Selecione a Categoria</option>
+        <option value="Auxiliar">Auxiliar</option>
+        <option value="Tecnico">Tecnico</option>
+        <option value="Enfermeiro">Enfermeiro</option>
+        </select>
+    </label>
+        <br>
+        <br>
+    <label>
+        <select id="mesSelect" name="options" class="custom-select">
+        <option value="Selecione o Mês">Selecione o Mês</option>
+        <option value="Janeiro">Janeiro</option>
+        <option value="Fevereiro">Fevereiro</option>
+        <option value="Março">Março</option>
+        <option value="Abril">Abril</option>
+        <option value="Maio">Maio</option>
+        <option value="Junho">Junho</option>
+        <option value="Julho">Julho</option>
+        <option value="Agosto">Agosto</option>
+        <option value="Setembro">Setembro</option>
+        <option value="Outubro">Outubro</option>
+        <option value="Novembro">Novembro</option>
+        <option value="Dezembro">Dezembro</option>
+        </select>
+    </label>
+        <br>
+        <br>
+        <button class="button" id="calcularButton">Calcular</button>
+        <br>
+        <br>
+        <p id="resultadoSec"></p>
+    </div>
+        <script src="../AppCalcAnuidade/calcSecundaria.js" type="text/javascript"></script>
+</body>
+</html>

@@ -2,46 +2,29 @@
 <html lang="en">
 <head>
     <title>Calculador de Anuidade</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="../AppCalcAnuidade/style.css">
 </head>
 
 <body>
+    <table>
+        <tr>
+            <td>
+                <div id="info"><h1>Selecione a opção desejada.</h1></div>
 
-<nav>
-
-    <div id="info"><h1>Basta apenas selecionar a Categoria e o Mês para obter o valor da Taxa de Inscrição já com Anuidade.</h1></div>
-
-    <label For="categoriaSelect"><span>Selecione a Categoria:</span></label>
-    <select id="categoriaSelect" name="options">
-    <option value="Auxiliar">Auxiliar</option>
-    <option value="Tecnico">Tecnico</option>
-    <option value="Enfermeiro">Enfermeiro</option>
-    </select>
-    
-    <br>
-    <br>
-    <label For="mesSelect"><span>Selecione o Mês:</span></label>
-    <select id="mesSelect" name="options">
-<option value="Janeiro">Janeiro</option>
-<option value="Fevereiro">Fevereiro</option>
-<option value="Março">Março</option>
-<option value="Abril">Abril</option>
-<option value="Maio">Maio</option>
-<option value="Junho">Junho</option>
-<option value="Julho">Julho</option>
-<option value="Agosto">Agosto</option>
-<option value="Setembro">Setembro</option>
-<option value="Outubro">Outubro</option>
-<option value="Novembro">Novembro</option>
-<option value="Dezembro">Dezembro</option>
-    </select>
-    <br>
-    <br>
-    <button class="button" id="calcularButton">Calcular</button>
-    <br>
-    <p id="resultado"></p>
-</nav>
-    <script src="calcAnuidade.js" type="text/javascript"></script>
-    <a id="gitHubButton" href="https://github.com/sammurphey/materialDesignElements" target="_blank">Made by Felipe Nascimento</a>
+                <button class="button" onclick="abrirPagina('\calcPrimeiraInsc.html')">Primeira Inscrição</button>
+                <button class="button" onclick="abrirPagina('\calcReabertura.html')">Reabertura de Inscrição</button>
+                <button class="button" onclick="abrirPagina('\calcSecundaria.html')">Inscrição Secundária</button>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <div id="container">
+                <iframe id="iframe" src="" width="800" height="600"></iframe>
+                </div>
+            </td>
+        </tr>
+    </table>
+    <script src="../AppCalcAnuidade/janelas.js" type="text/javascript"></script>
+    <a id="myMark" href="" target="_blank">Made by Felipe Nascimento</a>
 </body>
 </html>
