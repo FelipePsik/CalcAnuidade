@@ -195,7 +195,7 @@ a:hover {
 }
 
 #iframe {
-  width: 100%;
-  height: 100%;
+  width: 100%; /* Centralizar */
+  height: 60%; /* Regular a altura no centro */
   border: none; /* Remova a borda padrão do iframe, se desejar */
 }
