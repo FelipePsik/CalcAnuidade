@@ -31,8 +31,13 @@ option {
     text-align: center;
 }
 
+#info {
+  padding: 10px;
+}
 
-h1 {padding: 30px; text-align: center; font-size: 1.2em;}
+.info {text-align: left; font-size: 0.9em;}
+
+h1 {padding: 10px; text-align: center; font-size: 1.2em;}
 
 #myMark {
 	background: rgba(0,0,0,0.25);
@@ -179,23 +184,78 @@ a:hover {
 
 .container {
   border: 10px solid #ddd; /* Adicione uma borda para separar visualmente os carrosséis */
-  padding: 10px; /* Adicione espaçamento interno */
   border-radius: 15px; /* Arredonde as bordas do contêiner */
   max-width: 600px;
-  text-align: center;
-}
-
-.hidden {
-  display: none;
 }
 
 #container {
-  width: 1080px; /* Defina a largura desejada para o container */
-  height: 720px; /* Defina a altura desejada para o container */
+  width: 900px; /* Defina a largura desejada para o container */
+  height: 700px; /* Defina a altura desejada para o container */
 }
 
 #iframe {
   width: 100%; /* Centralizar */
   height: 60%; /* Regular a altura no centro */
   border: none; /* Remova a borda padrão do iframe, se desejar */
+}
+
+/* Configuração dos Cards */
+
+.card {
+  position: relative;
+  display: inline-block;
+  align-items: center;
+  justify-content: center;
+  width: 35%;
+  height: 30%;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+  padding: 10px;
+  overflow: hidden;
+  border-radius: 10px;
+  background: #212121;
+  border: 2px solid #313131;
+  transition: all 0.5s cubic-bezier(0.23, 1, 0.320, 1);
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 5px;
+  color: #e8e8e8;
+  transition: all 0.5s cubic-bezier(0.23, 1, 0.320, 1);
+  text-align: justify;
+}
+
+.content .heading {
+  font-weight: 700;
+  font-size: 20px;
+}
+
+.content .para {
+  line-height: 1.5;
+  font-size: 14px;
+}
+
+.card:hover {
+  box-shadow: 0 0 20px rgba(9, 117, 241, 0.8);
+  border-color: #0974f1;
+}
+
+/* Card Tabela de Anuidades */
+
+.card-anuidades {
+  position: relative;
+  display: inline-block;
+  align-items: center;
+  justify-content: center;
+  width: 35%;
+  height: 100%;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+  padding: 10px;
+  overflow: hidden;
+  border-radius: 10px;
+  background: #212121;
+  border: 2px solid #313131;
+  transition: all 0.5s cubic-bezier(0.23, 1, 0.320, 1);
 }
