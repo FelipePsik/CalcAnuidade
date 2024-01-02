@@ -1,7 +1,7 @@
-var anuidade_aux = 208.9;
-var anuidade_tec = 255.49;
-var anuidade_enf = 353.53;
-var taxaSec = 200;
+var anuidade_aux = 216.25;
+var anuidade_tec = 264.48;
+var anuidade_enf = 365.97;
+var taxaSec = 171;
 
 var meses = [
   "Abril",

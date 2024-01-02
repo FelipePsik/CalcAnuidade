@@ -1,7 +1,7 @@
-  var anuidade_aux = 208.9;
-  var anuidade_tec = 255.49;
-  var anuidade_enf = 353.53;
-  var taxaInscricao = 242.27;
+  var anuidade_aux = 216.25;
+  var anuidade_tec = 264.48;
+  var anuidade_enf = 365.97;
+  var taxaInscricao = 250.79;
 
   var meses = [
     "Abril",
