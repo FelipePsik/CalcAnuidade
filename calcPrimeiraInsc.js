@@ -34,9 +34,9 @@ calcularButton.addEventListener("click", function () {
   var valorAnuidadePrimeiraInscricao = 0;
 
   if (categoriaInscricao === "Auxiliar") {
-    valorAnuidadePrimeiraInscricao = anuidade_aux / 2;
+    valorAnuidadePrimeiraInscricao = (anuidade_aux / 2).toFixed(2);
   } else if (categoriaInscricao === "Tecnico") {
-    valorAnuidadePrimeiraInscricao = anuidade_tec / 2;
+    valorAnuidadePrimeiraInscricao = (anuidade_tec / 2).toFixed(2);
   } else if (categoriaInscricao === "Enfermeiro") {
     valorAnuidadePrimeiraInscricao = (anuidade_enf * 0.7).toFixed(2);
   } else if (categoriaInscricao === "Selecione a Categoria") {
