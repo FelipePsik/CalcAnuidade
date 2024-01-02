@@ -1,7 +1,7 @@
 var anuidade_aux = 216.25;
 var anuidade_tec = 264.48;
 var anuidade_enf = 365.97;
-var taxaSec = 171;
+var taxaReab = 171;
 
 var meses = [
   "Abril",
@@ -47,11 +47,11 @@ if (categoriaReabertura === "Auxiliar") {
 if (meses.includes(mesSelecionado)) {
   var mesesCalculados =
     (valorAnuidadeReabertura / 12) * (12 - mesesMap[mesSelecionado] + 1);
-  var reabertura = Math.ceil(mesesCalculados * 100) / 100 + taxaSec;
+  var reabertura = Math.ceil(mesesCalculados * 100) / 100 + taxaReab;
 
   resultadoElement.textContent = "A reabertura de " + categoriaSelect.value + " para o mês de " + mesSelect.value + " está no valor de R$" + reabertura.toFixed(2);
 } else { (["Janeiro", "Fevereiro", "Março"].includes(mesSelecionado.toLowerCase())) 
-  var valorUnico = parseFloat(valorAnuidadeReabertura) + parseFloat(taxaSec);
+  var valorUnico = parseFloat(valorAnuidadeReabertura) + parseFloat(taxaReab);
   resultadoElement.textContent = "Para os meses de Janeiro, Fevereiro ou Março, o valor é de R$" + valorUnico;
 } if (mesSelecionado === "Selecione o Mês") {
 resultadoElement.textContent = "Escolha o mês desejado.";
