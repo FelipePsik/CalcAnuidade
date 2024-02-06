@@ -1,7 +1,7 @@
 var anuidade_aux = 216.25;
 var anuidade_tec = 264.48;
 var anuidade_enf = 365.97;
-var taxaReab = 171;
+var taxaReab = 262.20;
 
 var meses = [
   "Abril",
