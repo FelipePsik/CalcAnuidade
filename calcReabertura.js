@@ -1,22 +1,24 @@
-var anuidade_aux = 216.25;
-var anuidade_tec = 264.48;
-var anuidade_enf = 365.97;
-var taxaReab = 262.20;
+  var anuidade_aux = 224.27;
+  var anuidade_tec = 274.29;
+  var anuidade_enf = 379.55;
+  var taxaReab = 271.92;
 
-var meses = [
-  "Abril",
-  "Maio",
-  "Junho",
-  "Julho",
-  "Agosto",
-  "Setembro",
-  "Outubro",
-  "Novembro",
-  "Dezembro"
-];
-var nmeses = ["4", "5", "6", "7", "8", "9", "10", "11", "12"];
+  var meses = [
+    // "Abril",
+    // "Maio",
+    "Junho",
+    "Julho",
+    "Agosto",
+    "Setembro",
+    "Outubro",
+    "Novembro",
+    "Dezembro"
+    // Decisao de n 50 extendeu o prazo da anuidade ate Maio
+    
+  ];
+  var nmeses = ["6", "7", "8", "9", "10", "11", "12"];
 
-// Mapeando os meses aos números.
+  // Mapeando os meses aos números.
 var mesesMap = {};
 for (var i = 0; i < meses.length; i++) {
   mesesMap[meses[i]] = nmeses[i];
@@ -50,9 +52,9 @@ if (meses.includes(mesSelecionado)) {
   var reabertura = Math.ceil(mesesCalculados * 100) / 100 + taxaReab;
 
   resultadoElement.textContent = "A reabertura de " + categoriaSelect.value + " para o mês de " + mesSelect.value + " está no valor de R$" + reabertura.toFixed(2);
-} else { (["Janeiro", "Fevereiro", "Março"].includes(mesSelecionado.toLowerCase())) 
+} else { (["Janeiro", "Fevereiro", "Março", "Abril", "Maio"].includes(mesSelecionado.toLowerCase())) 
   var valorUnico = parseFloat(valorAnuidadeReabertura) + parseFloat(taxaReab);
-  resultadoElement.textContent = "Para os meses de Janeiro, Fevereiro ou Março, o valor é de R$" + valorUnico;
+  resultadoElement.textContent = "Para os meses de Janeiro à Maio, o valor é de R$" + valorUnico;
 } if (mesSelecionado === "Selecione o Mês") {
 resultadoElement.textContent = "Escolha o mês desejado.";
 return;
