@@ -1,11 +1,11 @@
-  var anuidade_aux = 216.25;
-  var anuidade_tec = 264.48;
-  var anuidade_enf = 365.97;
-  var taxaInscricao = 250.79;
+  var anuidade_aux = 224.27;
+  var anuidade_tec = 274.29;
+  var anuidade_enf = 379.55;
+  var taxaInscricao = 260.09;
 
   var meses = [
-    "Abril",
-    "Maio",
+    // "Abril",
+    // "Maio",
     "Junho",
     "Julho",
     "Agosto",
@@ -13,8 +13,10 @@
     "Outubro",
     "Novembro",
     "Dezembro"
+    // Decisao de n 50 extendeu o prazo da anuidade ate Maio
+    
   ];
-  var nmeses = ["4", "5", "6", "7", "8", "9", "10", "11", "12"];
+  var nmeses = ["6", "7", "8", "9", "10", "11", "12"];
 
   // Mapeando os meses aos números.
   var mesesMap = {};
@@ -50,9 +52,9 @@ calcularButton.addEventListener("click", function () {
     var inscricao = Math.ceil(mesesCalculados * 100) / 100 + taxaInscricao;
 
     resultadoElement.textContent = "A primeira inscrição de " + categoriaSelect.value + " para o mês de " + mesSelect.value + " é de R$" + inscricao.toFixed(2);
-  } else { (["Janeiro", "Fevereiro", "Março"].includes(mesSelecionado.toLowerCase())) 
+  } else { (["Janeiro", "Fevereiro", "Março", "Abril", "Maio"].includes(mesSelecionado.toLowerCase())) 
     var valorUnico = parseFloat(valorAnuidadePrimeiraInscricao) + parseFloat(taxaInscricao);
-    resultadoElement.textContent = "Para os meses de Janeiro, Fevereiro ou Março, o valor é de R$" + valorUnico;
+    resultadoElement.textContent = "Para os meses de Janeiro à Maio, o valor é de R$" + valorUnico;
   } if (mesSelecionado === "Selecione o Mês") {
   resultadoElement.textContent = "Escolha o mês desejado.";
   return;
