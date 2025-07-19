@@ -52,11 +52,13 @@ if (meses.includes(mesSelecionado)) {
   var secundaria = Math.ceil(mesesCalculados * 100) / 100 + taxaSec;
 
   resultadoElement.textContent = "A inscrição secundária de " + categoriaSelect.value + " para o mês de " + mesSelect.value + " está no valor de R$" + secundaria.toFixed(2);
-} else { (["Janeiro", "Fevereiro", "Março", "Abril", "Maio"].includes(mesSelecionado.toLowerCase())) 
+} else if (["janeiro","fevereiro","março","abril","maio"].includes(mesSelecionado.toLowerCase())) {
   var valorUnico = parseFloat(valorAnuidadeSec) + parseFloat(taxaSec);
   resultadoElement.textContent = "Para os meses de Janeiro à Maio, o valor é de R$" + valorUnico;
-} if (mesSelecionado === "Selecione o Mês") {
-resultadoElement.textContent = "Escolha o mês desejado.";
-return;
+}
+
+if (mesSelecionado === "Selecione o Mês") {
+  resultadoElement.textContent = "Escolha o mês desejado.";
+  return;
 }
 });
