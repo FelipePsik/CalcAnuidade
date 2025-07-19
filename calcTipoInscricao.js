@@ -18,21 +18,29 @@ for (let i = 0; i < meses.length; i++) {
 }
 
 const calcularButton = document.getElementById('calcularButton');
+const tipoSelect = document.getElementById('tipoSelect');
 const categoriaSelect = document.getElementById('categoriaSelect');
 const mesSelect = document.getElementById('mesSelect');
+
+// Ajusta o tipo selecionado quando recebido por parametro na URL
+const params = new URLSearchParams(window.location.search);
+const tipoParam = params.get('tipo');
+if (tipoParam) {
+  tipoSelect.value = tipoParam;
+}
 
 calcularButton.addEventListener('click', () => {
   const categoria = categoriaSelect.value;
   const mesSelecionado = mesSelect.value;
+  const tipo = tipoSelect.value;
+
+  const resultadoElement = document.getElementById('resultado');
 
   let valorAnuidade = 0;
   let taxa = 0;
-  let resultadoElement = null;
   let texto = '';
 
-  if (document.getElementById('resultado')) {
-    // Primeira inscrição
-    resultadoElement = document.getElementById('resultado');
+  if (tipo === 'primeira') {
     texto = 'A primeira inscrição de ';
     if (categoria === 'Auxiliar') {
       valorAnuidade = valores.anuidade_aux / 2;
@@ -45,9 +53,7 @@ calcularButton.addEventListener('click', () => {
       return;
     }
     taxa = valores.taxaInscricao;
-  } else if (document.getElementById('resultadoReab')) {
-    // Reabertura
-    resultadoElement = document.getElementById('resultadoReab');
+  } else if (tipo === 'reabertura') {
     texto = 'A reabertura de ';
     if (categoria === 'Auxiliar') {
       valorAnuidade = valores.anuidade_aux;
@@ -60,9 +66,7 @@ calcularButton.addEventListener('click', () => {
       return;
     }
     taxa = valores.taxaReab;
-  } else if (document.getElementById('resultadoSec')) {
-    // Secundária
-    resultadoElement = document.getElementById('resultadoSec');
+  } else if (tipo === 'secundaria') {
     texto = 'A inscrição secundária de ';
     if (categoria === 'Auxiliar') {
       valorAnuidade = valores.anuidade_aux;
@@ -75,11 +79,12 @@ calcularButton.addEventListener('click', () => {
       return;
     }
     taxa = valores.taxaSec;
+  } else {
+    resultadoElement.textContent = 'Escolha o tipo de inscrição.';
+    return;
   }
 
-  if (!resultadoElement) return;
-
-  if (mesSelecionado === 'Selecione o Mês') {
+  if (!mesSelecionado) {
     resultadoElement.textContent = 'Escolha o mês desejado.';
     return;
   }
