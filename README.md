@@ -4,6 +4,7 @@ Ver 1.2 - Adicionado as opções de reabertura de inscrição e inscrição secu
 Ver 1.4 - Atualização dos valores das Anuidades e na data limite de acordo com a Decisão nº 50 do Coren/SE. <br>
 Ver 1.5 - Adição de um novo Card com os valores das Taxas separados para melhor visualização. <br>
 Ver 1.6 - Os valores anuais de anuidades e taxas estao centralizados em `anuidades.js`.
+Ver 1.7 - Unificado as páginas de inscrição em apenas um html, assim como as páginas de calculador de cada inscrição em apenas um arquivo .js.
 
 ## Como usar
 Abra `index.html` em seu navegador. Selecione o tipo de inscrição, a categoria e o mês desejado e clique em **Calcular**.
