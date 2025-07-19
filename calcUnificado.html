@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -10,18 +10,18 @@
     <div class="container">
         <div id="info"><h1>Selecione o tipo de inscrição, a categoria e o mês para calcular.</h1></div>
         <label>
-            <select id="tipoSelect" name="options" class="custom-select">
-                <option value="Selecione o Tipo">Selecione o Tipo</option>
-                <option value="Primeira Inscrição">Primeira Inscrição</option>
-                <option value="Reabertura de Inscrição">Reabertura de Inscrição</option>
-                <option value="Inscrição Secundária">Inscrição Secundária</option>
+            <select id="tipoSelect" name="tipo" class="custom-select">
+                <option value="">Tipo de Inscrição</option>
+                <option value="primeira">Primeira Inscrição</option>
+                <option value="reabertura">Reabertura de Inscrição</option>
+                <option value="secundaria">Inscrição Secundária</option>
             </select>
         </label>
         <br>
         <br>
         <label>
-            <select id="categoriaSelect" name="options" class="custom-select">
-                <option value="Selecione a Categoria">Selecione a Categoria</option>
+            <select id="categoriaSelect" name="categoria" class="custom-select">
+                <option value="">Selecione a Categoria</option>
                 <option value="Auxiliar">Auxiliar</option>
                 <option value="Tecnico">Tecnico</option>
                 <option value="Enfermeiro">Enfermeiro</option>
@@ -30,8 +30,8 @@
         <br>
         <br>
         <label>
-            <select id="mesSelect" name="options" class="custom-select">
-                <option value="Selecione o Mês">Selecione o Mês</option>
+            <select id="mesSelect" name="mes" class="custom-select">
+                <option value="">Selecione o Mês</option>
                 <option value="Janeiro">Janeiro</option>
                 <option value="Fevereiro">Fevereiro</option>
                 <option value="Março">Março</option>
@@ -53,6 +53,6 @@
         <br>
         <p id="resultado"></p>
     </div>
-    <script type="module" src="calcTipoInscricaoUnificado.js"></script>
+    <script type="module" src="calcTipoInscricao.js"></script>
 </body>
 </html>
