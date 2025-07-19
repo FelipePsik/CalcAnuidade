@@ -151,7 +151,6 @@ h1 {padding: 10px; text-align: center; font-size: 1.2em;}
     appearance: none;
     height: 50x;
     padding: 10px 15px 10px 14px;
-    background: #fff url("select-arrows.svg") no-repeat right 16px center;
     background-size: 10px;
     transition: border-color .1s ease-in-out,box-shadow .1s ease-in-out;
     border: 1px solid #ddd;
@@ -193,11 +192,6 @@ a:hover {
   height: 700px; /* Defina a altura desejada para o container */
 }
 
-#iframe {
-  width: 100%; /* Centralizar */
-  height: 60%; /* Regular a altura no centro */
-  border: none; /* Remova a borda padrão do iframe, se desejar */
-}
 
 /* Configuração dos Cards */
 
@@ -242,20 +236,3 @@ a:hover {
   border-color: #0974f1;
 }
 
-/* Card Tabela de Anuidades */
-
-.card-anuidades {
-  position: relative;
-  display: inline-block;
-  align-items: center;
-  justify-content: center;
-  width: 32%;
-  height: 100%;
-  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
-  padding: 10px;
-  overflow: hidden;
-  border-radius: 10px;
-  background: #212121;
-  border: 2px solid #313131;
-  transition: all 0.5s cubic-bezier(0.23, 1, 0.320, 1);
-}
