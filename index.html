@@ -1,68 +1,89 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
 <head>
-    <title>Calculador de Anuidade COREN-SE</title>
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8">
+  <title>Calculador de Anuidade COREN-SE</title>
+  <link rel="stylesheet" href="style.css">
 </head>
-
 <body>
-    <table>
-        <tr>
-            <td>
-                <div id="container">
-                <iframe id="iframe" src="calcTipoInscricao.html" width="800" height="600"></iframe>
-                <h1>Informações úteis</h1>
-                <!--
-                <div class="card">
-                    <div class="content">
-                    <p class="heading">Taxas 2025</p>
-                    <p class="para">
-                        Expedição de Carteira Profissional – R$94.58 <br>
-                        Certidão de Responsabilidade Técnica – R$248.27 <br>
-                        Inscrição e Registro de Pessoa Física – R$165.51 <br>
-                        Inscrição e Registro de Pessoa Jurídica – R$449.26 <br>
-                        Transferência de Inscrição – R$118.23 <br>
-                        Reabertura de Inscrição – R$177.34 <br>
-                        Autorização para exercício profissional no exterior – R$172.60 <br>
-                        Certidão Narrativa – R$47.29
-                    </p> 
-                    </div>
-                </div>
-                -->
-                <div class="card">
-                    <div class="content">
-                    <p class="heading">Anuidade por Categoria 2025</p>
-                    <p class="para">
-                        Categoria de Auxiliar: R$<span id="val_aux"></span> <br>
-                        Categoria de Técnico: R$<span id="val_tec"></span> <br>
-                        Categoria de Enfermeiro: R$<span id="val_enf"></span>
-                    </p>
-                    </div>
-                </div>
-                <div class="card">
-                    <div class="content">
-                    <p class="heading">Taxas de Serviços 2025</p>
-                    <p class="para">
-                        Inscrição: R$<span id="taxa_insc"></span><br>
-                        Reabertura: R$<span id="taxa_reab"></span><br>
-                        Secundária: R$<span id="taxa_sec"></span><br>
-                        Transferência: R$212.81
-                    </p>
-                    </div>
-                </div>
-                </div>
-            </td>
-        </tr>
-    </table>
-    <script type="module">
-    import { valores } from "./anuidades.js";
-    document.getElementById("val_aux").textContent = valores.anuidade_aux.toFixed(2);
-    document.getElementById("val_tec").textContent = valores.anuidade_tec.toFixed(2);
-    document.getElementById("val_enf").textContent = valores.anuidade_enf.toFixed(2);
-    document.getElementById("taxa_insc").textContent = valores.taxaInscricao.toFixed(2);
-    document.getElementById("taxa_reab").textContent = valores.taxaReab.toFixed(2);
-    document.getElementById("taxa_sec").textContent = valores.taxaSec.toFixed(2);
-    </script>
-    <a id="myMark" href="" target="_blank">Made by Felipe Nascimento</a>
+  <div id="container">
+    <div class="container">
+      <div id="info"><h1>Selecione o Tipo de Inscrição, a Categoria e o Mês.</h1></div>
+      <label>
+        <select id="tipoSelect" name="tipo" class="custom-select">
+          <option value="">Tipo de Inscrição</option>
+          <option value="primeira">Primeira Inscrição</option>
+          <option value="reabertura">Reabertura de Inscrição</option>
+          <option value="secundaria">Inscrição Secundária</option>
+        </select>
+      </label>
+      <br><br>
+      <label>
+        <select id="categoriaSelect" name="categoria" class="custom-select">
+          <option value="">Selecione a Categoria</option>
+          <option value="Auxiliar">Auxiliar</option>
+          <option value="Tecnico">Tecnico</option>
+          <option value="Enfermeiro">Enfermeiro</option>
+        </select>
+      </label>
+      <br><br>
+      <label>
+        <select id="mesSelect" name="mes" class="custom-select">
+          <option value="">Selecione o Mês</option>
+          <option value="Janeiro">Janeiro</option>
+          <option value="Fevereiro">Fevereiro</option>
+          <option value="Março">Março</option>
+          <option value="Abril">Abril</option>
+          <option value="Maio">Maio</option>
+          <option value="Junho">Junho</option>
+          <option value="Julho">Julho</option>
+          <option value="Agosto">Agosto</option>
+          <option value="Setembro">Setembro</option>
+          <option value="Outubro">Outubro</option>
+          <option value="Novembro">Novembro</option>
+          <option value="Dezembro">Dezembro</option>
+        </select>
+      </label>
+      <br><br>
+      <button class="button" id="calcularButton">Calcular Valor</button>
+      <br><br>
+      <p id="resultado"></p>
+    </div>
+    <h1>Informações úteis</h1>
+    <div id="cards">
+      <div class="card">
+        <div class="content">
+          <p class="heading">Anuidade por Categoria 2025</p>
+          <p class="para">
+            Categoria de Auxiliar: R$<span id="val_aux"></span> <br>
+            Categoria de Técnico: R$<span id="val_tec"></span> <br>
+            Categoria de Enfermeiro: R$<span id="val_enf"></span>
+          </p>
+        </div>
+      </div>
+      <div class="card">
+        <div class="content">
+          <p class="heading">Taxas de Serviços 2025</p>
+          <p class="para">
+            Inscrição: R$<span id="taxa_insc"></span><br>
+            Reabertura: R$<span id="taxa_reab"></span><br>
+            Secundária: R$<span id="taxa_sec"></span><br>
+            Transferência: R$212.81
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script type="module">
+    import { valores } from './anuidades.js';
+    document.getElementById('val_aux').textContent = valores.anuidade_aux.toFixed(2);
+    document.getElementById('val_tec').textContent = valores.anuidade_tec.toFixed(2);
+    document.getElementById('val_enf').textContent = valores.anuidade_enf.toFixed(2);
+    document.getElementById('taxa_insc').textContent = valores.taxaInscricao.toFixed(2);
+    document.getElementById('taxa_reab').textContent = valores.taxaReab.toFixed(2);
+    document.getElementById('taxa_sec').textContent = valores.taxaSec.toFixed(2);
+  </script>
+  <script type="module" src="calcTipoInscricao.js"></script>
+  <a id="myMark" href="" target="_blank">Made by Felipe Nascimento</a>
 </body>
 </html>
