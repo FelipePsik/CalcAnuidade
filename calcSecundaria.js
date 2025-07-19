@@ -46,17 +46,24 @@ if (categoriaSec === "Auxiliar") {
   return;
 }
 
-if (meses.includes(mesSelecionado)) {
+if (mesSelecionado === "Selecione o Mês") {
+  resultadoElement.textContent = "Escolha o mês desejado.";
+  return;
+} else if (meses.includes(mesSelecionado)) {
   var mesesCalculados =
     (valorAnuidadeSec / 12) * (12 - mesesMap[mesSelecionado] + 1);
   var secundaria = Math.ceil(mesesCalculados * 100) / 100 + taxaSec;
 
-  resultadoElement.textContent = "A inscrição secundária de " + categoriaSelect.value + " para o mês de " + mesSelect.value + " está no valor de R$" + secundaria.toFixed(2);
-} else { (["Janeiro", "Fevereiro", "Março", "Abril", "Maio"].includes(mesSelecionado.toLowerCase())) 
+  resultadoElement.textContent =
+    "A inscrição secundária de " +
+    categoriaSelect.value +
+    " para o mês de " +
+    mesSelect.value +
+    " está no valor de R$" +
+    secundaria.toFixed(2);
+} else if (["janeiro", "fevereiro", "março", "abril", "maio"].includes(mesSelecionado.toLowerCase())) {
   var valorUnico = parseFloat(valorAnuidadeSec) + parseFloat(taxaSec);
-  resultadoElement.textContent = "Para os meses de Janeiro à Maio, o valor é de R$" + valorUnico;
-} if (mesSelecionado === "Selecione o Mês") {
-resultadoElement.textContent = "Escolha o mês desejado.";
-return;
+  resultadoElement.textContent =
+    "Para os meses de Janeiro à Maio, o valor é de R$" + valorUnico;
 }
 });

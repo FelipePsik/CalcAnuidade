@@ -46,17 +46,24 @@ calcularButton.addEventListener("click", function () {
     return;
   }
 
-  if (meses.includes(mesSelecionado)) {
+  if (mesSelecionado === "Selecione o Mês") {
+    resultadoElement.textContent = "Escolha o mês desejado.";
+    return;
+  } else if (meses.includes(mesSelecionado)) {
     var mesesCalculados =
       (valorAnuidadePrimeiraInscricao / 12) * (12 - mesesMap[mesSelecionado] + 1);
     var inscricao = Math.ceil(mesesCalculados * 100) / 100 + taxaInscricao;
 
-    resultadoElement.textContent = "A primeira inscrição de " + categoriaSelect.value + " para o mês de " + mesSelect.value + " é de R$" + inscricao.toFixed(2);
-  } else { (["Janeiro", "Fevereiro", "Março", "Abril", "Maio"].includes(mesSelecionado.toLowerCase())) 
+    resultadoElement.textContent =
+      "A primeira inscrição de " +
+      categoriaSelect.value +
+      " para o mês de " +
+      mesSelect.value +
+      " é de R$" +
+      inscricao.toFixed(2);
+  } else if (["janeiro", "fevereiro", "março", "abril", "maio"].includes(mesSelecionado.toLowerCase())) {
     var valorUnico = parseFloat(valorAnuidadePrimeiraInscricao) + parseFloat(taxaInscricao);
-    resultadoElement.textContent = "Para os meses de Janeiro à Maio, o valor é de R$" + valorUnico;
-  } if (mesSelecionado === "Selecione o Mês") {
-  resultadoElement.textContent = "Escolha o mês desejado.";
-  return;
-}
+    resultadoElement.textContent =
+      "Para os meses de Janeiro à Maio, o valor é de R$" + valorUnico;
+  }
 });
