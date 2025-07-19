@@ -182,14 +182,22 @@ a:hover {
 }
 
 .container {
-  border: 10px solid #ddd; /* Adicione uma borda para separar visualmente os carrosséis */
-  border-radius: 15px; /* Arredonde as bordas do contêiner */
-  max-width: 600px;
+border: 10px solid #ddd; /* Adicione uma borda para separar visualmente os carrosséis */
+border-radius: 15px; /* Arredonde as bordas do contêiner */
+max-width: 600px;
+width: 100%;
+margin: 0 auto; /* Centraliza a div em telas menores */
 }
 
 #container {
-  width: 900px; /* Defina a largura desejada para o container */
-  height: 700px; /* Defina a altura desejada para o container */
+display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  max-width: 900px;
+  margin: 0 auto;
+  height: auto;
+  padding: 20px 0;
 }
 
 
