@@ -1,15 +1,9 @@
 body{
-	align-items: center;
-  text-align: center;
-	background:white;
-	box-sizing:border-box;
-	color: #666;
-	cursor: default;
-	display: flex;
-	font-family: sans-serif;
-	justify-content: center;
-	-webkit-tap-highlight-color: transparent;
-	-webkit-touch-callout: none;
+	background: white;
+  	color: #666;
+ 	font-family: sans-serif;
+	margin: 0;
+ 	padding: 0;
 
   /* 
   Desabilitar seleção de texto
@@ -190,14 +184,10 @@ margin: 0 auto; /* Centraliza a div em telas menores */
 }
 
 #container {
-display: flex;
-  flex-direction: column;
-  align-items: center;
-  width: 100%;
-  max-width: 900px;
-  margin: 0 auto;
-  height: auto;
-  padding: 20px 0;
+width: 100%;
+max-width: 1000px;
+margin: 0 auto;
+padding: 20px;
 }
 
 #wrapper {
@@ -209,6 +199,7 @@ display: flex;
 
 #wrapper .container {
   margin-left: 30px;
+  flex: 1;
 }
 
 #material-apoio {
