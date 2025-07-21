@@ -1,12 +1,15 @@
 body{
-        display: flex;
-        flex-direction: column;
         align-items: center;
-        background: white;
+        text-align: center;
+        background:white;
+        box-sizing:border-box;
         color: #666;
+        cursor: default;
+        display: flex;
         font-family: sans-serif;
-        margin: 0;
-        padding: 0;
+        justify-content: center;
+        -webkit-tap-highlight-color: transparent;
+        -webkit-touch-callout: none;
 
   /* 
   Desabilitar seleção de texto
@@ -187,45 +190,14 @@ margin: 0 auto; /* Centraliza a div em telas menores */
 }
 
 #container {
-width: 100%;
-max-width: 1000px;
-margin: 0 auto;
-padding: 20px;
-}
-
-#wrapper {
-  display: flex;
+display: flex;
+  flex-direction: column;
+  align-items: center;
   width: 100%;
-  justify-content: center;
-  align-items: flex-start;
-  gap: 30px;
-}
-
-#wrapper .container {
-  margin-left: 30px;
-  flex: 1;
-}
-
-#material-apoio {
-  width: 100%;
-  max-width: 250px;
-  margin-right: 20px;
-  text-align: left;
-}
-
-@media (max-width: 768px) {
-  #wrapper {
-    flex-direction: column;
-    align-items: center;
-  }
-  #wrapper .container {
-    margin-left: 0;
-    margin-top: 20px;
-  }
-  #material-apoio {
-    margin-bottom: 20px;
-    text-align: center;
-  }
+  max-width: 900px;
+  margin: 0 auto;
+  height: auto;
+  padding: 20px 0;
 }
 
 #cards {
